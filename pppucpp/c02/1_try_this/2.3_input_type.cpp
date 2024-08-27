@@ -1,9 +1,11 @@
-/* TRY THIS
- * Get the ‘‘name and age’’ example to run. Then, modify it to write out the age in
- * number of months: read the input in years and multiply (using the ∗ operator) by 12.
- * Read the age into a double to allow for children who can be very proud of being ﬁve
- * and a half years old rather than just ﬁve.
- */
+/*
+   TRY THIS
+   Get the ‘‘name and age’’ example to run. Then, modify it to write out the age in
+   number of months: read the input in years and multiply (using the ∗ operator) by 12.
+   Read the age into a double to allow for children who can be very proud of being ﬁve
+   and a half years old rather than just ﬁve.
+*/
+
 #include <iostream>
 
 int main()
