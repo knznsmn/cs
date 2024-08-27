@@ -1,6 +1,5 @@
 #include <iostream>
 
-void simple_error(std::string s);
 int main()
 {
   /*
