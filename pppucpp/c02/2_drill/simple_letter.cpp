@@ -67,22 +67,18 @@ int main()
   else if (friend_age > 70)
     std::cout << "Are you retired?";
   else {
-    std::cout << "Nice. You should enjoy life. ";
+    std::cout << "You should enjoy life.";
   }
 
-  std::cout << "There's a long and happy years ahead of you.\n";
+  std::cout << " There's a long and happy years ahead of you.\n";
   std::cout << std::endl;
 
   /*
      Add ‘‘Yours sincerely,’’ followed by two blank lines for a signature, followed by your
      name.
   */
-
+  std::cout << std::endl;
   std::cout << "Yours sincerely,\n\n";
   std::cout << "Julius C. Cesar" << std::endl;
-
 }
 
-void simple_error(std::string s) {
-  std::cout << s << std::endl;
-}
