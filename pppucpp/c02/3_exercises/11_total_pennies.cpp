@@ -60,9 +60,9 @@ int main()
   if (penny == 1) std::cout << " half dollar"; else std::cout << " half dollars";
   std::cout << ".\n";
 
-  double total_coins = (penny * 0.01) + (nickel * 0.05) + (dime * 0.1) + (quarter * 0.25) + (half * 0.5);
-  int dollar = total_coins;
-  double cent = total_coins % dollar;
+  int total_coins = (penny * 1) + (nickel * 5) + (dime * 10) + (quarter * 25) + (half * 50);
+  int dollar = total_coins / 100;
+  int cent = total_coins % 100;
   std::cout << "The value of all your coins is " << dollar;
   if (dollar == 1) std::cout << " dollar"; else std::cout << " dollars";
   if (cent != 0) std::cout << " and " << cent << " cents.\n"; else std::cout << ".\n";
