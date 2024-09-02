@@ -1,15 +1,12 @@
 /*
-   TRY THIS 
-   The character'b'ischar(’a’+1),'c'ischar(’a’+2), etc. Use a loop to write out a table of characters with their corresponding integer values:
-   a 97 b 98 ...
-   z 122
- */
+   TRY THIS Rewrite the character value example from the previousTRY THISto use afor-state-ment. Then modify your program to also write out a table of the integer values for uppercase letters and digits. 
+*/
 
 #include <iostream>
 
 int main()
 {
-  char letter = 'a';
+  // char letter = 'a';
 
   for (char i = 'a'; i <= 'z'; i++)
   {
@@ -17,13 +14,11 @@ int main()
     std::cout << i << "\t" << in_int << std::endl;
   }
 
-  /*
-  while (letter <= 'z')
+  std::cout << "uppercase.\n";
+  for (char i = 'A'; i <= 'Z'; i++)
   {
-  int in_int = letter;
-    std::cout << letter << "\t" << in_int << "\n";
-    letter++;
+    int in_int = i;
+    std::cout << i << "\t" << in_int << std::endl;
   }
-  */
   std::cout << "Done.\n";
 }
