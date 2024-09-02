@@ -19,11 +19,12 @@ int main()
 
 int square(int n)
 {
-  for (int i = 0; i <= n; i++)
+  int sum = 0;
+  for (int i = n; i > 0; i--)
   {
-    n += n;
+    sum += n;
   }
 
-  return n;
+  return sum;
 }
 
