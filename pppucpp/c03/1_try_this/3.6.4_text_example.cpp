@@ -1,5 +1,10 @@
 /*
-   TRY THIS Write a program that ‘‘bleeps’’ out words that you don’t like; that is, you read in words usingcinand print them again oncout. If a word is among a few you have defined, you write outBLEEPinstead of that word. Start with one ‘‘disliked word’’ such as string disliked = "Broccoli";
+   TRY THIS
+   Write a program that ‘‘bleeps’’ out words that you don’t like; that is, you read in
+   words using cin and print them again on cout. If a word is among a few you have
+   deﬁned, you write out BLEEP instead of that word. Start with one ‘‘disliked word’’
+   such as
+   string disliked = "Broccoli";
    When that works, add a few more.
 */
 
@@ -8,24 +13,22 @@
 
 int main()
 {
-  std::vector<std::string> bleeps {"Anyhow", "However"};
-  std::vector<std::string> words;
-  std::string word = ' ';
-  while (std::cin >> word)
+  std::cout << "This program says bleep when cursed.\n\n";
+  std::vector <std::string> dislikes {"shit", "damn", "hell", "AI"};
+
+  for (std::string word; std::cin >> word;)
   {
-    words.push_back(word);
-    for (std::string s : words)
+    bool is_disliked = false;
+    for (std::string x : dislikes)
     {
-      std::cout << s << ", ";
+      if (x == word)
+        is_disliked = true;
     }
-    /*
-    for (std::string s : bleeps)
-    {
-      if (word == s)
-        std::cout << "Bleep\n";
-      else 
-        std::cout << s << std::endl;
-    }
-    */
+    if (is_disliked)
+      std::cout << "BLEEP" << std::endl;
+    else
+      std::cout << word << std::endl;
   }
+  std::cout << "\n\n" << std::endl;
+  std::cout << "End of the program\n";
 }
