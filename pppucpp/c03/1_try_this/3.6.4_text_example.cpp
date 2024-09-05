@@ -14,17 +14,21 @@
 int main()
 {
   std::cout << "This program says bleep when cursed.\n\n";
-  std::vector <std::string> bleeps {"shit", "damn", "hell"};
+  std::vector <std::string> dislikes {"shit", "damn", "hell", "AI"};
 
   for (std::string word; std::cin >> word;)
   {
-    for (std::string x : bleeps)
+    bool is_disliked = false;
+    for (std::string x : dislikes)
     {
       if (x == word)
-      {
-        std::cout << "BLEEP" << std::endl;
-      }
+        is_disliked = true;
     }
-    std::cout << word << std::endl;
+    if (is_disliked)
+      std::cout << "BLEEP" << std::endl;
+    else
+      std::cout << word << std::endl;
   }
+  std::cout << "\n\n" << std::endl;
+  std::cout << "End of the program\n";
 }
