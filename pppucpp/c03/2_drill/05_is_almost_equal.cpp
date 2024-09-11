@@ -26,12 +26,15 @@ int main()
     }
     else
       std::cout << x << " and " << y << " are equal.\n";
-    }
-
+    
+    /*
     if (is_almost(x, y)) 
     {
       std::cout << "The numbers are almost equal." << std::endl;
     }
+    */
+    std::cout << (is_almost(x, y) ? "The numbers are almost equal" : "")
+              << std::endl;
   }
 }
 
@@ -39,15 +42,8 @@ double is_almost(double x, double y)
 {
   double larger,
          smaller;
-  if (x > y)
-  {
-    larger = x;
-    smaller = y;
-  }
-  else {
-    larger = y;
-    smaller = x;
-  }
+  std::string msg;
+  x < y ? larger = y, smaller = x : larger = x, smaller = y;
 
-  return (larger - smaller) <= (10 / 100);
+  return (larger - smaller) <= (10.0 / 100.0);
 }
