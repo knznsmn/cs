@@ -12,10 +12,10 @@ int main()
   scanf("%d%d", &x, &y);
 
   printf("\nYou entered %d and %d.\n", x, y);
-  printf("%d\n", add(x, y));
-  printf("%d\n", sub(x, y));
-  printf("%d\n", mul(x, y));
-  printf("%d\n", div(x, y));
+  printf("%d + %d = %d\n", x, y, add(x, y));
+  printf("%d - %d = %d\n", x, y, sub(x, y));
+  printf("%d x %d = %d\n", x, y, mul(x, y));
+  printf("%d / %d = %d\n", x, y, div(x, y));
 
 }
 
