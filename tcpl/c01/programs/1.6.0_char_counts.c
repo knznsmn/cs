@@ -29,7 +29,7 @@ int main()
   }
   for (int i = 0; i < sizeof(digits)/sizeof(int); i++)
   {
-    if (i == sizeof(digits)/sizeof(int)))
+    if (i == sizeof(digits)/sizeof(int))
       printf("%d.\n", digits[i]);
     else
       printf("%d, ", digits[i]);
