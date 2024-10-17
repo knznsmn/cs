@@ -1,0 +1,11 @@
+#!/data/data/com.termux/files/usr/bin/lua
+
+local fichier = io.open("journal.md", "a")
+if fichier then
+  fichier:write("Enter")
+  fichier:close()
+else
+  local fichier = io.open("journal.md", "w")
+end
+
+

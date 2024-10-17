@@ -1,0 +1,18 @@
+#!/data/data/com.termux/files/usr/bin/lua
+
+function is_odd(n)
+  return n % 2 == 0
+end
+
+if #arg < 1 then
+  print("Na, needs an argument")
+  os.exit(1)
+end
+
+local argument = arg[1]
+
+if is_odd(argument) then
+  print("Even")
+else
+  print("Odd")
+end
