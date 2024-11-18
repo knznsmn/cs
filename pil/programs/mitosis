@@ -1,0 +1,13 @@
+#!/data/data/com.termux/files/usr/bin/lua
+local origin = io.open("mitosis", "r")
+
+
+if origin == nil then
+  print("The file \"mitosis\" doesn't exist.")
+else
+  local data = origin:read("*all")
+  origin:close()
+  local clone = io.open("clone", "w")
+  clone:write(data)
+  clone:close()
+end

@@ -1,11 +1,39 @@
 #!/data/data/com.termux/files/usr/bin/lua
+--[[
+--    name:     Journal
+--    author:   knznsmn
+--]]
+function date()
+  return (os.date("%Y-%m-%d"))
+end
 
+function note()
+  local s = io.read()
+  return s
+end
+
+function intro()
+  local program = {
+    name = "Journal",
+    version = "0.0.1",
+    date = date()
+  }
+  io.write("\n", program.name, " ", program.version)
+  io.write("\n", program.date)
+  io.write("\n\n")
+end
+
+intro()
 local fichier = io.open("journal.md", "a")
-if fichier then
-  fichier:write("Enter")
-  fichier:close()
-else
+if not fichier then
   local fichier = io.open("journal.md", "w")
 end
 
-
+io.write("Enter your daily note: ")
+local note = note()
+fichier:write(date())
+fichier:write("\nDaily Journal")
+fichier:write("\n", date(), "\n")
+fichier:write(note)
+fichier:close()
+print(fichier)
